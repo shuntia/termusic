@@ -685,7 +685,7 @@ async fn player_thread(mut args: PlayerThreadArgs) {
                 sink.stop();
             }
             PlayerInternalCmd::Volume(volume) => {
-                sink.set_volume((f32::from(volume) / 100.0).powi(3));
+                sink.set_volume(f32::from(volume) / 100.0);
                 args.volume_inside.store(volume, Ordering::SeqCst);
             }
             PlayerInternalCmd::Skip => {
