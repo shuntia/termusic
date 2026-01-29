@@ -66,7 +66,7 @@ impl Controls {
     /// The value `1.0` is the "normal" volume (unfiltered input). Any value other than 1.0 will
     /// multiply each sample by this value.
     ///
-    /// Unlike `Controls::volume()`, this method cubes the raw linear volume to get a human-natural
+    /// Unlike a direct access of `Controls::volume`, this method cubes the raw linear volume to get a human-natural
     /// sound curve.
     ///
     /// Reference: <https://www.dr-lex.be/info-stuff/volumecontrols.html>
